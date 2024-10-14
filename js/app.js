@@ -17,27 +17,6 @@ if (eta > 65) {
 
 
 //Output
-// let ticketFinalPrice = ticketBasePrice - discount;
-// console.log(`Il prezzo finale da pagare è ${ticketFinalPrice}€`);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-let num = 1.41920;
-let numArrotondato = parseFloat(num.toFixed(2));
-console.log(numArrotondato); 
-
-
-
-
+let ticketFinalPrice = ticketBasePrice - discount;
+ticketFinalPrice = ticketFinalPrice.toFixed(2);
+console.log(`Il prezzo finale da pagare è ${ticketFinalPrice}€`);
