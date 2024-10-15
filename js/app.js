@@ -8,15 +8,19 @@ let discount = 0;
 
 
 //Sconti
-if(eta < 18) {
-    discount = ticketBasePrice * (20/100);
-} 
+if (eta < 18) {
+    discount = ticketBasePrice * (20 / 100);
+}
 if (eta > 65) {
-    discount = ticketBasePrice * (40/100);
+    discount = ticketBasePrice * (40 / 100);
 }
 
 
 //Output
 let ticketFinalPrice = ticketBasePrice - discount;
-ticketFinalPrice = ticketFinalPrice.toFixed(2);
-console.log(`Il prezzo finale da pagare è ${ticketFinalPrice}€`);
+const formattedPrice = new Intl.NumberFormat("it-IT", {
+    style: "currency",
+    currency: "EUR",
+}).format(ticketFinalPrice);
+// ticketFinalPrice = ticketFinalPrice.toFixed(2);
+console.log(`Il prezzo finale da pagare è ${formattedPrice}`);
